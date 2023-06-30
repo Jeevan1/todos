@@ -1,0 +1,118 @@
+.menuBar{
+  .menu{
+    font-size: 25px;
+    color: #A089FF;
+  }
+}
+.Profile{
+    padding: 15px;
+    overflow: hidden;
+    .userProfile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+        gap: 10px;
+        .userImg{
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid gray;
+        }
+        .userInfo{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .name{
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .profession{
+                font-weight: 600;
+                color: #A089FF;
+            }
+        }
+    }
+    hr{
+        height: 3px;
+        width: 80%;
+        margin: auto;
+        background-color: #A089FF;
+        border-radius: 10px;
+    }
+    .tasksList{
+        margin-top: 40px;
+        display: flex;
+        width: 80%;
+        // justify-content: space-evenly;
+        gap: 16px;
+        padding-left: 10px;
+        .left{
+            .icon{
+                font-size: 22px;
+            }
+        }
+        .right{
+            list-style: none;
+            li{
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                .icon{
+                    font-size: 24px;
+                    color: #A089FF;
+                }
+            }
+            .title{
+                font-weight: 600;
+                padding: 3px 0 5px 0;
+                color: rgb(90, 87, 87);
+            }
+            .listItem{
+                padding: 7px 0;
+                color: rgb(90, 87, 87);
+            }
+        }
+    }
+    .scheduleTask,.setting{
+        margin-top: 25px;
+        margin-bottom: 10px;
+        display: flex;
+        cursor: pointer;
+        // width: 80%;
+        gap: 16px;
+        align-items: center;
+        padding-left: 10px;
+        .icon{
+            font-size: 24px;
+            color: gray;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(90, 87, 87);
+        }
+    }
+}
+@media(max-width: 10000px){
+    .menuBar{
+        display: none;
+    }
+}
+@media(max-width: 700px){
+    .menuBar{
+        display: block;
+    }
+    .Profile{
+        display: none;
+        height: fit-content;
+        
+    }
+    .active{
+        display: block;
+        border: 1px solid gray;
+    }
+}
